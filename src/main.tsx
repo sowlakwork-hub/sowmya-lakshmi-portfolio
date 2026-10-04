@@ -5,19 +5,20 @@ import './styles.css';
 
 const nav = ['home', 'about', 'skills', 'projects', 'education', 'experience', 'certificates', 'achievements', 'contact'];
 const greetings = ['வணக்கம்', 'Hello', 'नमस्ते', 'నమస్తే', 'ನಮಸ್ಕಾರ', 'നമസ്കാരം', 'こんにちは', 'Hola'];
+const publicBase = import.meta.env.BASE_URL;
 
 const certificates = [
-  { id:'iitm-qualifier', title:'IIT Madras — Foundation Qualifier & Admission', group:'IIT Madras', date:'Foundation-level qualifier', image:'/proofs/p09-iitm-qualifier.png', pdf:'/proofs/p09-iitm-qualifier.pdf' },
-  { id:'iitm-badges', title:'IIT Madras — Academic Progress Badges', group:'IIT Madras', date:'Academic progress record', image:'/proofs/p11-iitm-badges.png', pdf:'/proofs/p11-iitm-badges.pdf' },
-  { id:'iitm-id', title:'IIT Madras — Foundation Level Student ID', group:'IIT Madras', date:'Student ID / supporting proof', image:'/proofs/p08-iitm-id.png', pdf:'/proofs/p08-iitm-id.pdf' },
-  { id:'fls', title:'FLSmidth Internship & Project Certificate', group:'Internship', date:'4 Aug 2025 – 31 Oct 2025', image:'/proofs/p19-flsmidth.png', pdf:'/proofs/p19-flsmidth.pdf' },
-  { id:'immersive', title:'Immersive Technology Workshop', group:'Workshops', date:'Certificate of participation', image:'/proofs/p05-immersive-tech.png', pdf:'/proofs/p05-immersive-tech.pdf' },
-  { id:'python-ai', title:'AI for Techies — Python Using AI Workshop', group:'Workshops', date:'Issued 8 Mar 2026', image:'/proofs/p18-python-ai.png', pdf:'/proofs/p18-python-ai.pdf' },
-  { id:'be10x', title:'AI Tools & Claude Workshop', group:'Workshops', date:'Issued 1 Oct 2026', image:'/proofs/p20-be10x.png', pdf:'/proofs/p20-be10x.pdf' },
-  { id:'throwball', title:'Throwball — Certificate of Merit', group:'Achievements', date:'Annual Sports Meet 2021–2022', image:'/proofs/p03-throwball.png', pdf:'/proofs/p03-throwball.pdf' },
-  { id:'wall', title:'Wall Painting — Certificate of Merit', group:'Achievements', date:'Annual event 2021–2022', image:'/proofs/p04-wall-painting.png', pdf:'/proofs/p04-wall-painting.pdf' },
-  { id:'volleyball', title:'Volleyball — Certificate of Merit', group:'Achievements', date:'Annual Sports Meet 2022–2023', image:'/proofs/p06-volleyball.png', pdf:'/proofs/p06-volleyball.pdf' },
-  { id:'imctf', title:'IMCTF — Bharateeya Samskara Gaanam Appreciation', group:'Achievements', date:'24 Jan 2020', image:'/proofs/p07-imctf.png', pdf:'/proofs/p07-imctf.pdf' },
+  { id:'iitm-qualifier', title:'IIT Madras — Foundation Qualifier & Admission', group:'IIT Madras', date:'Foundation-level qualifier', image:`${publicBase}proofs/p09-iitm-qualifier.png`, pdf:`${publicBase}proofs/p09-iitm-qualifier.pdf` },
+  { id:'iitm-badges', title:'IIT Madras — Academic Progress Badges', group:'IIT Madras', date:'Academic progress record', image:`${publicBase}proofs/p11-iitm-badges.png`, pdf:`${publicBase}proofs/p11-iitm-badges.pdf` },
+  { id:'iitm-id', title:'IIT Madras — Foundation Level Student ID', group:'IIT Madras', date:'Student ID / supporting proof', image:`${publicBase}proofs/p08-iitm-id.png`, pdf:`${publicBase}proofs/p08-iitm-id.pdf` },
+  { id:'fls', title:'FLSmidth Internship & Project Certificate', group:'Internship', date:'4 Aug 2025 – 31 Oct 2025', image:`${publicBase}proofs/p19-flsmidth.png`, pdf:`${publicBase}proofs/p19-flsmidth.pdf` },
+  { id:'immersive', title:'Immersive Technology Workshop', group:'Workshops', date:'Certificate of participation', image:`${publicBase}proofs/p05-immersive-tech.png`, pdf:`${publicBase}proofs/p05-immersive-tech.pdf` },
+  { id:'python-ai', title:'AI for Techies — Python Using AI Workshop', group:'Workshops', date:'Issued 8 Mar 2026', image:`${publicBase}proofs/p18-python-ai.png`, pdf:`${publicBase}proofs/p18-python-ai.pdf` },
+  { id:'be10x', title:'AI Tools & Claude Workshop', group:'Workshops', date:'Issued 1 Oct 2026', image:`${publicBase}proofs/p20-be10x.png`, pdf:`${publicBase}proofs/p20-be10x.pdf` },
+  { id:'throwball', title:'Throwball — Certificate of Merit', group:'Achievements', date:'Annual Sports Meet 2021–2022', image:`${publicBase}proofs/p03-throwball.png`, pdf:`${publicBase}proofs/p03-throwball.pdf` },
+  { id:'wall', title:'Wall Painting — Certificate of Merit', group:'Achievements', date:'Annual event 2021–2022', image:`${publicBase}proofs/p04-wall-painting.png`, pdf:`${publicBase}proofs/p04-wall-painting.pdf` },
+  { id:'volleyball', title:'Volleyball — Certificate of Merit', group:'Achievements', date:'Annual Sports Meet 2022–2023', image:`${publicBase}proofs/p06-volleyball.png`, pdf:`${publicBase}proofs/p06-volleyball.pdf` },
+  { id:'imctf', title:'IMCTF — Bharateeya Samskara Gaanam Appreciation', group:'Achievements', date:'24 Jan 2020', image:`${publicBase}proofs/p07-imctf.png`, pdf:`${publicBase}proofs/p07-imctf.pdf` },
 ];
 
 const skills = [
@@ -300,7 +301,7 @@ function App() {
 
             <div className="hero-portrait">
               <div className="portrait-orbit orbit-a"/><div className="portrait-orbit orbit-b"/><div className="portrait-orbit orbit-c"/>
-              <div className="portrait-frame"><img src="/sowmya.jpg" alt="Sowmya Lakshmi B"/></div>
+              <div className="portrait-frame"><img src={`${publicBase}Elegant-sowmya.png.png`} alt="Sowmya Lakshmi" /></div>
               <div className="portrait-moonlight" aria-hidden="true"/>
               <div className="portrait-marker marker-one">B.TECH IT</div>
               <div className="portrait-marker marker-two">IIT MADRAS</div>
